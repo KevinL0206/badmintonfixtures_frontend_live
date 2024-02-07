@@ -17,7 +17,7 @@ export const Home = () => {
             (async () => {           
                 try {             
                     const {data} = await axios.get(   // Create the GET request to the backend API.
-                            'http://localhost:8000/home/', {
+                            'https://badmintonfixtures-71b4cbceb35a.herokuapp.com/home/', {
                             headers: {
                                 'Content-Type': 'application/json',
                                 'Authorization': `Bearer ${localStorage.getItem('access_token')}` 
@@ -33,7 +33,7 @@ export const Home = () => {
     useEffect(() => {
         const fetchClubData = async () => {
             const {data} = await axios.get(   // Create the GET request to the backend API.
-                `http://127.0.0.1:8000/api/display-create-club/${localStorage.getItem('username')}/`, {
+                `https://badmintonfixtures-71b4cbceb35a.herokuapp.com/api/display-create-club/${localStorage.getItem('username')}/`, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${localStorage.getItem('access_token')}` 
@@ -53,7 +53,7 @@ export const Home = () => {
     const handleSubmit = async () => {
         try {
             const response = await axios.post(
-                `http://127.0.0.1:8000/api/display-create-club/${localStorage.getItem('username')}/`,{
+                `https://badmintonfixtures-71b4cbceb35a.herokuapp.com/api/display-create-club/${localStorage.getItem('username')}/`,{
                 "clubName": clubName,
                 }, {
                 headers: {

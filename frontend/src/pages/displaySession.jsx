@@ -20,7 +20,7 @@ export const DisplaySession = () => {
         const fetchSessionDetails = async () => {
             try {
                 const response = await axios.get(   // Create the GET request to the backend API.
-                    `http://127.0.0.1:8000/api/session-detail/${username}/${clubName}/${year}/${month}/${day}/`, 
+                    `https://badmintonfixtures-71b4cbceb35a.herokuapp.com/api/session-detail/${username}/${clubName}/${year}/${month}/${day}/`, 
                     {
                     headers: {
                         'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ export const DisplaySession = () => {
     const createMatch = async () => {
         try {
             const response = await axios.post(
-                `http://127.0.0.1:8000/api/create-match/${username}/${clubName}/${year}/${month}/${day}/`, 
+                `https://badmintonfixtures-71b4cbceb35a.herokuapp.com/api/create-match/${username}/${clubName}/${year}/${month}/${day}/`, 
                 {}, // data object is empty
                 { // options object
                     headers: {

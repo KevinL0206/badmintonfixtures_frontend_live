@@ -6,7 +6,7 @@ export const Logout = () => {
         (async () => {
             try {
                 const {data} = await axios.post(
-                    'http://localhost:8000/logout/',
+                    'https://badmintonfixtures-71b4cbceb35a.herokuapp.com/logout/',
                     { refresh_token: localStorage.getItem('refresh_token') },
                     {
                         headers: {

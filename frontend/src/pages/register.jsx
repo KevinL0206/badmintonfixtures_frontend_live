@@ -27,7 +27,7 @@ export const Register = () => {
             password: data.password,
         }
 
-        fetch("http://localhost:8000/register/", {
+        fetch("https://badmintonfixtures-71b4cbceb35a.herokuapp.com/register/", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(data)

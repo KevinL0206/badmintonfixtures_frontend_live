@@ -18,7 +18,7 @@ export default function Component(props) {
         try {
             console.log(props.clubName);
             const response = await axios.post(
-                `http://127.0.0.1:8000/api/display-create-session/${props.username}/${props.clubName}/`, 
+                `https://badmintonfixtures-71b4cbceb35a.herokuapp.com/api/display-create-session/${props.username}/${props.clubName}/`, 
                 {
                     'clubName': props.clubName,
                 },
@@ -45,7 +45,7 @@ export default function Component(props) {
         console.log(playerName);
         try {
             const response = await axios.post(
-                `http://127.0.0.1:8000/api/display-create-club-players/${props.username}/${props.clubName}/`,{
+                `https://badmintonfixtures-71b4cbceb35a.herokuapp.com/api/display-create-club-players/${props.username}/${props.clubName}/`,{
                     "playerName": playerName,
                 },
                 {

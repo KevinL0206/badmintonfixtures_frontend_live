@@ -20,7 +20,7 @@ export const Login = () => {
             };
 
         // Create the POST request
-        const {data} = await axios.post('http://localhost:8000/token/', user, { 
+        const {data} = await axios.post('https://badmintonfixtures-71b4cbceb35a.herokuapp.com/token/', user, { 
             headers: {'Content-Type': 'application/json'},
             withCredentials: true
         });

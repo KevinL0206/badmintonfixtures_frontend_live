@@ -33,7 +33,7 @@ if (error.response.status === 401 && !originalRequest._retry) {
     isRefreshing = true;
 
     return new Promise((resolve, reject) => {
-    axios.post('http://localhost:8000/token/refresh/', {
+    axios.post('https://badmintonfixtures-71b4cbceb35a.herokuapp.com/token/refresh/', {
         refresh: localStorage.getItem('refresh_token')
     }, {
         headers: {

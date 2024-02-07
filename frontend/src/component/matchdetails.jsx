@@ -16,7 +16,7 @@ export default function MatchDetails(props) {
         console.log(props);
         try {
             const response = await axios.post(
-                `http://127.0.0.1:8000/api/update-match/${props.username}/${props.clubName}/${props.year}/${props.month}/${props.day}/${props.matchid}/ `, 
+                `https://badmintonfixtures-71b4cbceb35a.herokuapp.com/api/update-match/${props.username}/${props.clubName}/${props.year}/${props.month}/${props.day}/${props.matchid}/ `, 
                 {
                 "score": score,
                 }, 

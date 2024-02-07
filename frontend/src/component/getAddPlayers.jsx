@@ -10,7 +10,7 @@ export const FetchAddPlayers = (props) => {
         const fetchData = async () => {
             try {
                 const {data} = await axios.get(
-                    `http://127.0.0.1:8000/api/add-player-to-session/${props.username}/${props.clubName}/${props.year}/${props.month}/${props.day}/`, {
+                    `https://badmintonfixtures-71b4cbceb35a.herokuapp.com/api/add-player-to-session/${props.username}/${props.clubName}/${props.year}/${props.month}/${props.day}/`, {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${localStorage.getItem('access_token')}`,
@@ -37,7 +37,7 @@ export const FetchAddPlayers = (props) => {
 
         try {
             const response = await axios.post(
-                `http://127.0.0.1:8000/api/add-player-to-session/${props.username}/${props.clubName}/${props.year}/${props.month}/${props.day}/`, {
+                `https://badmintonfixtures-71b4cbceb35a.herokuapp.com/api/add-player-to-session/${props.username}/${props.clubName}/${props.year}/${props.month}/${props.day}/`, {
                 "players": selectedPlayers,
                 },
                 {
