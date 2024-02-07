@@ -13,6 +13,7 @@ export const Home = () => {
         if(localStorage.getItem('access_token') === null){ // Check if the user is authenticated or not. if not redirect to login page.                      
             window.location.href = '/login'
         }
+        
         else{ // If the user is authenticated, then get the message from the backend API.
             (async () => {           
                 try {             

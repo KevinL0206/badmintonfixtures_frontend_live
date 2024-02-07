@@ -17,6 +17,9 @@ export const DisplaySession = () => {
         if(localStorage.getItem('access_token') === null){ // Check if the user is authenticated or not. if not redirect to login page.                      
             window.location.href = '/login'
         }
+        if(localStorage.getItem('username') !== username){ 
+            window.location.href = '/login'
+        }
         const fetchSessionDetails = async () => {
             try {
                 const response = await axios.get(   // Create the GET request to the backend API.

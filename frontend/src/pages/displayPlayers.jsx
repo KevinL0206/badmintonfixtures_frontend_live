@@ -13,6 +13,9 @@ export const DisplayPlayers = () => {
         if(localStorage.getItem('access_token') === null){              
             window.location.href = '/login'
         }
+        if(localStorage.getItem('username') !== username){ 
+            window.location.href = '/login'
+        }
         const fetchClubPlayers = async () => {
             try {
                 const response = await axios.get( 

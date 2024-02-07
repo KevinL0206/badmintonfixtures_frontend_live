@@ -13,6 +13,8 @@ import { DisplayMatch } from './pages/displayMatch';
 import { DisplayPlayers } from './pages/displayPlayers';
 import { DisplaySinglePlayer } from './pages/displaySinglePlayer';
 
+
+
 function App() {
   return (
     <BrowserRouter>
