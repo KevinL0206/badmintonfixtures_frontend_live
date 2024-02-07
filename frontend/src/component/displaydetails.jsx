@@ -108,7 +108,7 @@ export default function Component(props) {
 
             </main>
             <aside className="w-[21rem] border-l bg-gray-100/40 p-6 md:p-10 dark:bg-gray-800/40">
-                <Collapsible>
+                <Collapsible defaultOpen>
                     <CollapsibleTrigger className="flex items-center gap-2">
                     <ChevronRightIcon className="h-4 w-4" />
                     <span className="text-lg font-semibold">Club Members</span>

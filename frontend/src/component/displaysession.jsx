@@ -26,12 +26,14 @@ export default function DisplaySessionComp(props) {
                 </div>
                 <ScrollArea className="h-[600px] w-100 rounded-md border">
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                        {props.matches.map((match) => (
+                        {props.matches.map((match,index) => {
+                            let countdownIndex = props.matches.length - index;
+                            return(
                             <div key={match.matchID}>
                                 <Link to={`${match.matchID}`}>
                                 <Card>
                                     <CardHeader>
-                                        <CardTitle > Match {match.matchID}</CardTitle>
+                                        <CardTitle > Match {countdownIndex}</CardTitle>
                                     </CardHeader>
                                     <CardContent>
                                         <p className="text-sm text-gray-500 dark:text-gray-400">Team 1: {match.team1.join(' and ')}</p>
@@ -42,7 +44,8 @@ export default function DisplaySessionComp(props) {
                                 </Card>
                                 </Link>
                             </div>
-                        ))}
+                            )
+                            })}
                     </div>
                 </ScrollArea>
                 </main>
