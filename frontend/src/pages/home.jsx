@@ -32,17 +32,22 @@ export const Home = () => {
     }, []);
 
     useEffect(() => {
-        const fetchClubData = async () => {
-            const {data} = await axios.get(   // Create the GET request to the backend API.
-                `https://badmintonfixtures-71b4cbceb35a.herokuapp.com/api/display-create-club/${localStorage.getItem('username')}/`, {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${localStorage.getItem('access_token')}` 
-                }}
-            );            
-            setClubs(data);
+        try{
+            const fetchClubData = async () => {
+                const {data} = await axios.get(   // Create the GET request to the backend API.
+                    `https://badmintonfixtures-71b4cbceb35a.herokuapp.com/api/display-create-club/${localStorage.getItem('username')}/`, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${localStorage.getItem('access_token')}` 
+                    }}
+                );            
+                setClubs(data);
+            }
+            fetchClubData();}
+        catch (error) {
+            console.log("Failed to fetch Club Data", error);
+            window.location.href = '/login';
         }
-        fetchClubData();
     }, []);
 
     const handleClick = (clubname) => {

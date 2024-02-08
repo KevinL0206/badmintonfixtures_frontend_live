@@ -36,8 +36,8 @@ export default function DisplaySessionComp(props) {
                                         <CardTitle > Match {countdownIndex}</CardTitle>
                                     </CardHeader>
                                     <CardContent>
-                                        <p className="text-sm text-gray-500 dark:text-gray-400">Team 1: {match.team1.join(' and ')}</p>
-                                        <p className="text-sm text-gray-500 dark:text-gray-400">Team 2: {match.team2.join(' and ')}</p>
+                                        <p className="text-sm text-gray-500 dark:text-gray-400">Team 1: {match.team1_player_names.join(' and ')}</p>
+                                        <p className="text-sm text-gray-500 dark:text-gray-400">Team 2: {match.team2_player_names.join(' and ')}</p>
                                         <p className="text-sm text-gray-500 dark:text-gray-400">Score: {match.score}</p>
                                         <p className="text-sm text-gray-500 dark:text-gray-400">Status: {match.completed ? "Completed" :"In Progress"}</p>
                                     </CardContent>

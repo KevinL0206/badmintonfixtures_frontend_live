@@ -49,8 +49,8 @@ export const DisplayMatch = () => {
         match && <MatchDetails 
         matchID={match.matchID} 
         score={match.score} 
-        team1={match.team1} 
-        team2={match.team2} 
+        team1={match.team1_player_names} 
+        team2={match.team2_player_names} 
         status={match.completed ? "Completed" : "Ongoing"} 
         username={username} 
         clubName={clubName} 

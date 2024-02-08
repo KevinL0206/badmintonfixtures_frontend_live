@@ -8,7 +8,7 @@ import DisplaySessionComp from "@/component/displaysession";
 
 export const DisplaySession = () => {
 
-    const [sessionPlayers,setSessionPlayers] = useState([]); 
+
     const [matches,setMatches] = useState([]);
     const { username, clubName,year,month,day } = useParams(); 
     const [error, setError] = useState(null);
@@ -30,14 +30,19 @@ export const DisplaySession = () => {
                         'Authorization': `Bearer ${localStorage.getItem('access_token')}`,
                     }}
                 );
-                setSessionPlayers(response.data.session.players);
+                
                 setMatches(response.data.matches);
             } catch (error) {
                 console.error('Failed to fetch Session Details:', error);
             }
         }
         fetchSessionDetails();
+        
     }, []);
+
+    useEffect(() => {
+        console.log("matches",matches); 
+    }, [matches]);
 
     const createMatch = async () => {
         try {
